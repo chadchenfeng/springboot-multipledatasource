@@ -26,8 +26,8 @@ public class SecondDatasource {
 	public SqlSessionFactory sqlSessionFactory(@Qualifier("seconddatasource") DataSource datasource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean=new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(datasource);
-		sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver()
-				.getResources("classpath*:mapper/second/*.xml"));
+		/*sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver()
+				.getResources("classpath*:mapper/second/*.xml"));*/
 		return sqlSessionFactoryBean.getObject();
 	}
 }
